@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FlightTracker</string>
+    <string name="enter_flight_number_e_g_ai302">Enter Flight Number (e.g., AI302)</string>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/statsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tabs for navigation -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
+    <android.widget.ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:layout_gravity="center"/>
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvAverageDelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tracked Flight Averages"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp" />
+    <!-- Add flight entry -->
+    <EditText
+        android:id="@+id/etFlightNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Flight Number (e.g., AI302)"
+        android:inputType="text"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnAddFlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Flight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+
+    <!-- RecyclerView to show averages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEEEEE"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <!-- Refresh button -->
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh Stats"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>

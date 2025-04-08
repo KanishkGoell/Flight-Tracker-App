@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TabLayout for switching between features -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
+
+    <!-- Space to add breathing room -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Flight number entry -->
+    <EditText
+        android:id="@+id/etFlightNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_flight_number_e_g_ai302"
+        android:inputType="text"
+        android:layout_marginBottom="12dp"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/btnTrackFlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track Flight"
+        android:layout_marginBottom="12dp" />
+
+
+    <!-- Flight info display -->
+    <TextView
+        android:id="@+id/tvFlightInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flight data will appear here"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:background="#F5F5F5"
+        android:textColor="#000000"
+        android:layout_marginBottom="12dp" />
+
+    <!-- MapView to display flight location -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
